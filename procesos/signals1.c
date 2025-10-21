@@ -35,6 +35,7 @@ int main(){
 } else if (pid == 0) {
     signal(SIGUSR1, manejador1); 
     signal(SIGUSR2, manejador2);
+    printf("soy el hijo y mi pid %d\n", getpid());
     //El hijo cuando reciba una señal del tipo sigusr1 ejecutara 
     //la funcion manejador
     while(1){
@@ -49,8 +50,8 @@ int main(){
     sleep(1);
     kill(pid,SIGUSR2);//pausar el proceso hijo
     sleep(1);
-    kill(pid,SIGTERM);//acabado el hijo
-    printf("Fin de mandar señales\n");
+    //kill(pid,SIGTERM);//acabado el hijo
+    //printf("Fin de mandar señales\n");
 
 
 }

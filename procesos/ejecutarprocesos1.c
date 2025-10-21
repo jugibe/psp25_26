@@ -11,7 +11,7 @@ El programa se bloquea hasta que termina el comando.
 
 int main() {
     printf("Listando archivos del directorio actual:\n");
-    system("ls -l"); // Ejecuta el comando ls -l
+    system("firefox"); // Ejecuta el comando ls -l
     printf("Fin del comando.\n");
     return 0;
 }
