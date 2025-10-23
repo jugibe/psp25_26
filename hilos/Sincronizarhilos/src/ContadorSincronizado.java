@@ -4,12 +4,12 @@
  * los hilos van a comaprtir un objero contador
  * 
  */
-public class Contador {
+public class ContadorSincronizado {
 
     private Integer contador; //variable que va a contener la cantidad
     
     //Constructor, generamos un contador con una cantidad incial
-    public Contador(int c){
+    public ContadorSincronizado(int c){
         this.contador=c;
     }
 

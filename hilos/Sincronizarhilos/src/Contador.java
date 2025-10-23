@@ -1,3 +1,4 @@
+
 /*
  * psp 2025
  * Clase contador. Tiene un metodo que incrementa en uno el valor del contador

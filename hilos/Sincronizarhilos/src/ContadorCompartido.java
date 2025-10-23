@@ -1,4 +1,3 @@
-
 /*
  * psp 2025
  * Ejempo tipico en el que los hilos comparten un objeto
@@ -14,7 +13,7 @@ import java.util.ArrayList;
 public class ContadorCompartido {
 public static void main(String[] args) {
     
-    Contador c=new Contador(0);
+    ContadorSincronizado c=new ContadorSincronizado(0);
     final int NUMEROHILOS=10;
     ArrayList <Thread> listaHilos=new ArrayList<>();
     //Genero los 10 hilos con su tarea y los pongo a correr
@@ -44,7 +43,7 @@ public static void main(String[] args) {
 
 
 //La tarea es incrementar el contador 1000 veces
-private static void tarea(Contador x) {
+private static void tarea(ContadorSincronizado x) {
     final int CANTIDAD=1000;
     for (int i=0;i<CANTIDAD;i++){
         x.incrementar();
