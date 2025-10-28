@@ -38,9 +38,9 @@ public class Filosofo extends Thread {
         }
     }
 
-    //Para comer toma el tenedor derecho, y luego el izquierdo
+    //Para comer toma el tenedor izquierdo, y luego el izquierdo
     private void comer() {
-        synchronized (tenedorIzquierdo) {
+        synchronized (tenedorIzquierdo) {//Bloquea el tenedor izquierdo
             System.out.println(getName() + " tomó su tenedor izquierdo");
             try {
                 Thread.sleep(100); // Simula tiempo antes de intentar tomar el otro
@@ -48,10 +48,10 @@ public class Filosofo extends Thread {
                 e.printStackTrace();
             }
 
-            synchronized (tenedorDerecho) {
+            synchronized (tenedorDerecho) {//Bloquea el tenedor derecho
                 System.out.println(getName() + " tomó su tenedor derecho y está comiendo 🍝");
                 try {
-                    Thread.sleep((int)(Math.random() * 100));
+                    Thread.sleep((int)(Math.random() * 100));//come
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
